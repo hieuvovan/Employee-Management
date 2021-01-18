@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>01-jsp-servlets-mvc-database-application</display-name>
+  <welcome-file-list>
+    <welcome-file>home</welcome-file>
+  </welcome-file-list>
+  
+<servlet>
+	<servlet-name>myjsp</servlet-name>
+	<jsp-file>/index.jsp</jsp-file>
+</servlet>
+ 
+<servlet-mapping>
+	<servlet-name>myjsp</servlet-name>
+	<url-pattern>/home</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>login</servlet-name>
+	<jsp-file>/login.jsp</jsp-file>
+</servlet>
+ 
+<servlet-mapping>
+	<servlet-name>login</servlet-name>
+	<url-pattern>/dangnhap</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>qlns</servlet-name>
+	<jsp-file>/views/trang_chu.jsp</jsp-file>
+</servlet>
+ 
+<servlet-mapping>
+	<servlet-name>qlns</servlet-name>
+	<url-pattern>/QuanLyNhanSu</url-pattern>
+</servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>EmployeeController</display-name>
+    <servlet-name>EmployeeController</servlet-name>
+    <servlet-class>controller.EmployeeController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmployeeController</servlet-name>
+    <url-pattern>/EmployeeController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EmployeeController</display-name>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/loginprocess</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>EmployeeController</display-name>
+    <servlet-name>LogoutController</servlet-name>
+    <servlet-class>controller.LogoutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutController</servlet-name>
+    <url-pattern>/logoutprocess</url-pattern>
+  </servlet-mapping>
+</web-app>
